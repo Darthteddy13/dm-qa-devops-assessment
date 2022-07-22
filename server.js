@@ -27,7 +27,7 @@ app.get('/api/robots', (req, res) => {
     try {
         res.status(200).send(botsArr)
     } catch (error) {
-        rollbar.error(`Error fialed getting bots`)
+        rollbar.error(`Error failed getting all bots`)
         console.log('ERROR GETTING BOTS', error)
         res.sendStatus(400)
     }
@@ -44,7 +44,7 @@ app.get('/api/robots/five', (req, res) => {
 
     } catch (error) {
         rollbar.critical(`Failed drawing five bots`)
-        
+
         console.log('ERROR GETTING FIVE BOTS', error)
         res.sendStatus(400)
     }
